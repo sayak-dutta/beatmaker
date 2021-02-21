@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  zoom: 80%;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+select {
+  padding: 1rem;
+  outline: none;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+
+  background: rgb(88, 88, 88);
+  cursor: pointer;
+  border-radius: 1rem;
+  outline: none;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.mute.active {
+  background: rgb(182, 182, 182);
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background-color: rgb(127, 168, 250);
+}
+.snare-pad {
+  background-color: rgb(190, 134, 243);
+}
+.hihat-pad {
+  background-color: rgb(245, 173, 121);
+}
+
+.kick-pad.active {
+  background-color: rgb(23, 100, 253);
+}
+.snare-pad.active {
+  background-color: rgb(147, 34, 252);
+}
+.hihat-pad.active {
+  background-color: rgb(250, 118, 24);
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 2rem;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(88, 88, 88);
+  color: #fff;
+  border-radius: 0%;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: rgb(88, 88, 88);
+  color: #fff;
+  border: none;
+  outline: none;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
